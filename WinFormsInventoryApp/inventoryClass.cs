@@ -9,8 +9,8 @@ namespace WinFormsInventoryApp
 {
     internal class inventoryClass
     {
-        public BindingList<Product> Products { get; set; }
-        public BindingList<Part> AllParts { get; set; }
+        public required BindingList<Product> Products { get; set; }
+        public required BindingList<Part> AllParts { get; set; }
         public static void AddProduct(Product)
         {
       

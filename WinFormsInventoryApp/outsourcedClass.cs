@@ -8,6 +8,6 @@ namespace WinFormsInventoryApp
 {
     internal class outsourcedClass : abstractPartClass
     {
-        public string CompanyName { get; set; }
+        public required string CompanyName { get; set; }
     }
 }
