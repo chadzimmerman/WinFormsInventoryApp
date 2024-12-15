@@ -200,7 +200,7 @@
             // textBox8
             // 
             textBox8.BackColor = Color.Salmon;
-            textBox8.Location = new Point(242, 190);
+            textBox8.Location = new Point(242, 191);
             textBox8.Multiline = true;
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(180, 33);

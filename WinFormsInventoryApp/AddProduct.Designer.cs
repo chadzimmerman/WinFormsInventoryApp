@@ -44,13 +44,25 @@
             button1 = new Button();
             textBox7 = new TextBox();
             label8 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
             label9 = new Label();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            columnHeader5 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
+            listView2 = new ListView();
+            columnHeader7 = new ColumnHeader();
+            columnHeader8 = new ColumnHeader();
+            columnHeader9 = new ColumnHeader();
+            columnHeader10 = new ColumnHeader();
+            columnHeader11 = new ColumnHeader();
+            columnHeader12 = new ColumnHeader();
             SuspendLayout();
             // 
             // label1
@@ -189,34 +201,6 @@
             label8.TabIndex = 15;
             label8.Text = "All Candidate Parts";
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = Color.White;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Location = new Point(543, 118);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(393, 153);
-            tableLayoutPanel1.TabIndex = 16;
-            // 
-            // tableLayoutPanel2
-            // 
-            tableLayoutPanel2.BackColor = Color.White;
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Location = new Point(546, 378);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(393, 153);
-            tableLayoutPanel2.TabIndex = 18;
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -266,19 +250,99 @@
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = false;
             // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            listView1.Location = new Point(543, 109);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(391, 155);
+            listView1.TabIndex = 23;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Part ID";
+            columnHeader1.Width = 65;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Name";
+            columnHeader2.Width = 65;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Inventory";
+            columnHeader3.Width = 65;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Price";
+            columnHeader4.Width = 65;
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "Min";
+            columnHeader5.Width = 65;
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Max";
+            columnHeader6.Width = 65;
+            // 
+            // listView2
+            // 
+            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12 });
+            listView2.Location = new Point(543, 368);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(391, 155);
+            listView2.TabIndex = 24;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = View.Details;
+            // 
+            // columnHeader7
+            // 
+            columnHeader7.Text = "Part ID";
+            columnHeader7.Width = 65;
+            // 
+            // columnHeader8
+            // 
+            columnHeader8.Text = "Name";
+            columnHeader8.Width = 65;
+            // 
+            // columnHeader9
+            // 
+            columnHeader9.Text = "Inventory";
+            columnHeader9.Width = 65;
+            // 
+            // columnHeader10
+            // 
+            columnHeader10.Text = "Price";
+            columnHeader10.Width = 65;
+            // 
+            // columnHeader11
+            // 
+            columnHeader11.Text = "Min";
+            columnHeader11.Width = 65;
+            // 
+            // columnHeader12
+            // 
+            columnHeader12.Text = "Max";
+            columnHeader12.Width = 65;
+            // 
             // AddProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1023, 675);
+            Controls.Add(listView2);
+            Controls.Add(listView1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(tableLayoutPanel2);
             Controls.Add(label9);
-            Controls.Add(tableLayoutPanel1);
             Controls.Add(label8);
             Controls.Add(textBox7);
             Controls.Add(button1);
@@ -319,12 +383,24 @@
         private Button button1;
         private TextBox textBox7;
         private Label label8;
-        private TableLayoutPanel tableLayoutPanel1;
-        private TableLayoutPanel tableLayoutPanel2;
         private Label label9;
         private Button button2;
         private Button button3;
         private Button button4;
         private Button button5;
+        private ListView listView1;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
+        private ListView listView2;
+        private ColumnHeader columnHeader7;
+        private ColumnHeader columnHeader8;
+        private ColumnHeader columnHeader9;
+        private ColumnHeader columnHeader10;
+        private ColumnHeader columnHeader11;
+        private ColumnHeader columnHeader12;
     }
 }

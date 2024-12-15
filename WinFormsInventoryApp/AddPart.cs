@@ -58,3 +58,4 @@ namespace WinFormsInventoryApp
         }
     }
 }
+// if in-house button is clicked, then the label = "Machine ID", else it is = "Company Name". 
