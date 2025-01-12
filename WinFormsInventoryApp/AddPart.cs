@@ -34,6 +34,10 @@ namespace WinFormsInventoryApp
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            if (radioButtonOutsourced.Checked)
+            {
+                labelDynamicField.Text = "Company Name";
+            }
 
         }
 
@@ -56,6 +60,13 @@ namespace WinFormsInventoryApp
         {
 
         }
+
+        private void radioButtonInHouse_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonInHouse.Checked)
+            {
+                labelDynamicField.Text = "Machine ID";
+            }
+        }
     }
 }
-// if in-house button is clicked, then the label = "Machine ID", else it is = "Company Name". 

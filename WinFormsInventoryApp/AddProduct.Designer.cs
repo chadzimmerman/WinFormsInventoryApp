@@ -49,20 +49,22 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            listView1 = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
-            listView2 = new ListView();
-            columnHeader7 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            columnHeader10 = new ColumnHeader();
-            columnHeader11 = new ColumnHeader();
-            columnHeader12 = new ColumnHeader();
+            dataGridView1 = new DataGridView();
+            PartID = new DataGridViewTextBoxColumn();
+            Name = new DataGridViewTextBoxColumn();
+            Inventory = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
+            Min = new DataGridViewTextBoxColumn();
+            Max = new DataGridViewTextBoxColumn();
+            dataGridView2 = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -206,9 +208,9 @@
             label9.AutoSize = true;
             label9.Location = new Point(543, 347);
             label9.Name = "label9";
-            label9.Size = new Size(107, 15);
+            label9.Size = new Size(186, 15);
             label9.TabIndex = 17;
-            label9.Text = "All Candidate Parts";
+            label9.Text = "Parts Associated with this Product";
             // 
             // button2
             // 
@@ -250,85 +252,95 @@
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = false;
             // 
-            // listView1
+            // dataGridView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
-            listView1.Location = new Point(543, 109);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(391, 155);
-            listView1.TabIndex = 23;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PartID, Name, Inventory, Price, Min, Max });
+            dataGridView1.Location = new Point(543, 109);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(391, 169);
+            dataGridView1.TabIndex = 25;
             // 
-            // columnHeader1
+            // PartID
             // 
-            columnHeader1.Text = "Part ID";
-            columnHeader1.Width = 65;
+            PartID.HeaderText = "PartID";
+            PartID.Name = "PartID";
+            PartID.Width = 60;
             // 
-            // columnHeader2
+            // Name
             // 
-            columnHeader2.Text = "Name";
-            columnHeader2.Width = 65;
+            Name.HeaderText = "Name";
+            Name.Name = "Name";
+            Name.Width = 60;
             // 
-            // columnHeader3
+            // Inventory
             // 
-            columnHeader3.Text = "Inventory";
-            columnHeader3.Width = 65;
+            Inventory.HeaderText = "Inventory";
+            Inventory.Name = "Inventory";
+            Inventory.Width = 60;
             // 
-            // columnHeader4
+            // Price
             // 
-            columnHeader4.Text = "Price";
-            columnHeader4.Width = 65;
+            Price.HeaderText = "Price";
+            Price.Name = "Price";
+            Price.Width = 60;
             // 
-            // columnHeader5
+            // Min
             // 
-            columnHeader5.Text = "Min";
-            columnHeader5.Width = 65;
+            Min.HeaderText = "Min";
+            Min.Name = "Min";
+            Min.Width = 60;
             // 
-            // columnHeader6
+            // Max
             // 
-            columnHeader6.Text = "Max";
-            columnHeader6.Width = 65;
+            Max.HeaderText = "Max";
+            Max.Name = "Max";
+            Max.Width = 60;
             // 
-            // listView2
+            // dataGridView2
             // 
-            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12 });
-            listView2.Location = new Point(543, 368);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(391, 155);
-            listView2.TabIndex = 24;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            dataGridView2.Location = new Point(543, 372);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(391, 169);
+            dataGridView2.TabIndex = 26;
             // 
-            // columnHeader7
+            // dataGridViewTextBoxColumn1
             // 
-            columnHeader7.Text = "Part ID";
-            columnHeader7.Width = 65;
+            dataGridViewTextBoxColumn1.HeaderText = "PartID";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 60;
             // 
-            // columnHeader8
+            // dataGridViewTextBoxColumn2
             // 
-            columnHeader8.Text = "Name";
-            columnHeader8.Width = 65;
+            dataGridViewTextBoxColumn2.HeaderText = "Name";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 60;
             // 
-            // columnHeader9
+            // dataGridViewTextBoxColumn3
             // 
-            columnHeader9.Text = "Inventory";
-            columnHeader9.Width = 65;
+            dataGridViewTextBoxColumn3.HeaderText = "Inventory";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 60;
             // 
-            // columnHeader10
+            // dataGridViewTextBoxColumn4
             // 
-            columnHeader10.Text = "Price";
-            columnHeader10.Width = 65;
+            dataGridViewTextBoxColumn4.HeaderText = "Price";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.Width = 60;
             // 
-            // columnHeader11
+            // dataGridViewTextBoxColumn5
             // 
-            columnHeader11.Text = "Min";
-            columnHeader11.Width = 65;
+            dataGridViewTextBoxColumn5.HeaderText = "Min";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.Width = 60;
             // 
-            // columnHeader12
+            // dataGridViewTextBoxColumn6
             // 
-            columnHeader12.Text = "Max";
-            columnHeader12.Width = 65;
+            dataGridViewTextBoxColumn6.HeaderText = "Max";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.Width = 60;
             // 
             // AddProduct
             // 
@@ -336,8 +348,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1023, 675);
-            Controls.Add(listView2);
-            Controls.Add(listView1);
+            Controls.Add(dataGridView2);
+            Controls.Add(dataGridView1);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -359,8 +371,10 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "AddProduct";
+            this.Name.Name = "AddProduct";
             Text = "Product";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -388,19 +402,19 @@
         private Button button3;
         private Button button4;
         private Button button5;
-        private ListView listView1;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ListView listView2;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
-        private ColumnHeader columnHeader11;
-        private ColumnHeader columnHeader12;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn PartID;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Inventory;
+        private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn Min;
+        private DataGridViewTextBoxColumn Max;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

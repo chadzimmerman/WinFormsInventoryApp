@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsInventoryApp
 {
-    internal class outsourcedClass : abstractPartClass
+    internal class outsourcedClass : Part
     {
         public required string CompanyName { get; set; }
     }

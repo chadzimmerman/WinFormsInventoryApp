@@ -35,18 +35,18 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            label8 = new Label();
+            labelDynamicField = new Label();
             button1 = new Button();
             button2 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            radioButtonInHouse = new RadioButton();
+            radioButtonOutsourced = new RadioButton();
             textBox8 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            radioDynamicTextbox = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -125,15 +125,15 @@
             label7.Text = "Min";
             label7.Click += label7_Click;
             // 
-            // label8
+            // labelDynamicField
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11F);
-            label8.Location = new Point(102, 343);
-            label8.Name = "label8";
-            label8.Size = new Size(84, 20);
-            label8.TabIndex = 7;
-            label8.Text = "Machine ID";
+            labelDynamicField.AutoSize = true;
+            labelDynamicField.Font = new Font("Segoe UI", 11F);
+            labelDynamicField.Location = new Point(102, 343);
+            labelDynamicField.Name = "labelDynamicField";
+            labelDynamicField.Size = new Size(84, 20);
+            labelDynamicField.TabIndex = 7;
+            labelDynamicField.Text = "Machine ID";
             // 
             // button1
             // 
@@ -172,30 +172,32 @@
             textBox2.Size = new Size(180, 33);
             textBox2.TabIndex = 11;
             // 
-            // radioButton1
+            // radioButtonInHouse
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 11F);
-            radioButton1.Location = new Point(185, 16);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(87, 24);
-            radioButton1.TabIndex = 17;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "In-House";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioButtonInHouse.AutoSize = true;
+            radioButtonInHouse.Checked = true;
+            radioButtonInHouse.Font = new Font("Segoe UI", 11F);
+            radioButtonInHouse.Location = new Point(185, 16);
+            radioButtonInHouse.Name = "radioButtonInHouse";
+            radioButtonInHouse.Size = new Size(87, 24);
+            radioButtonInHouse.TabIndex = 17;
+            radioButtonInHouse.TabStop = true;
+            radioButtonInHouse.Text = "In-House";
+            radioButtonInHouse.UseVisualStyleBackColor = true;
+            radioButtonInHouse.CheckedChanged += radioButtonInHouse_CheckedChanged;
             // 
-            // radioButton2
+            // radioButtonOutsourced
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI", 11F);
-            radioButton2.Location = new Point(348, 16);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(103, 24);
-            radioButton2.TabIndex = 18;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Outsourced";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            radioButtonOutsourced.AutoSize = true;
+            radioButtonOutsourced.Font = new Font("Segoe UI", 11F);
+            radioButtonOutsourced.Location = new Point(348, 16);
+            radioButtonOutsourced.Name = "radioButtonOutsourced";
+            radioButtonOutsourced.Size = new Size(103, 24);
+            radioButtonOutsourced.TabIndex = 18;
+            radioButtonOutsourced.TabStop = true;
+            radioButtonOutsourced.Text = "Outsourced";
+            radioButtonOutsourced.UseVisualStyleBackColor = true;
+            radioButtonOutsourced.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // textBox8
             // 
@@ -234,14 +236,14 @@
             textBox5.Size = new Size(114, 33);
             textBox5.TabIndex = 22;
             // 
-            // textBox6
+            // radioDynamicTextbox
             // 
-            textBox6.BackColor = Color.Salmon;
-            textBox6.Location = new Point(242, 343);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(180, 33);
-            textBox6.TabIndex = 23;
+            radioDynamicTextbox.BackColor = Color.Salmon;
+            radioDynamicTextbox.Location = new Point(242, 343);
+            radioDynamicTextbox.Multiline = true;
+            radioDynamicTextbox.Name = "radioDynamicTextbox";
+            radioDynamicTextbox.Size = new Size(180, 33);
+            radioDynamicTextbox.TabIndex = 23;
             // 
             // AddPart
             // 
@@ -249,18 +251,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(640, 570);
-            Controls.Add(textBox6);
+            Controls.Add(radioDynamicTextbox);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox8);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(radioButtonOutsourced);
+            Controls.Add(radioButtonInHouse);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label8);
+            Controls.Add(labelDynamicField);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -283,17 +285,17 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Label label8;
+        private Label labelDynamicField;
         private Button button1;
         private Button button2;
         private TextBox textBox1;
         private TextBox textBox2;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton radioButtonInHouse;
+        private RadioButton radioButtonOutsourced;
         private TextBox textBox8;
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox radioDynamicTextbox;
     }
 }

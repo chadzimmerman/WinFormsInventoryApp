@@ -21,6 +21,28 @@ namespace WinFormsInventoryApp
         {
 
         }
+
+        private void button7_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var addPartForm = new AddPart();
+            addPartForm.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var modifyPartForm = new ModifyPart();
+            modifyPartForm.ShowDialog();
+        }
     }
 }
 // each button needs to do it's assigned function, namely addParts(), modifyParts(), deleteParts(), addProducts(), modifyProducts(), deleteProducts(), search() and exitProgram(). 

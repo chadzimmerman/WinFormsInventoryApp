@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsInventoryApp
 {
-    internal class inhouseClass : abstractPartClass
+    internal class inhouseClass : Part
     {
         public int MachineID { get; set; }
     }
