@@ -9,5 +9,7 @@ namespace WinFormsInventoryApp
     internal class outsourcedClass : Part
     {
         public required string CompanyName { get; set; }
+
+        //public override string DynamicInfo => $"Company: {CompanyName}";
     }
 }

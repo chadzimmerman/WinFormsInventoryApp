@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsInventoryApp
 {
-    internal class Product
+    public class Product
     {
         public required BindingList<Part> AssociatedParts { get; set; }
         public int ProductID { get; set; }

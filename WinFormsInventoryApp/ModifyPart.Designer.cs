@@ -45,6 +45,8 @@
             label2 = new Label();
             radioDynamicTextbox = new TextBox();
             labelDynamicField = new Label();
+            button2 = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // radioButtonInHouse
@@ -92,6 +94,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(114, 33);
             textBox5.TabIndex = 34;
+            textBox5.KeyPress += NumericTextBox_KeyPress;
             // 
             // textBox4
             // 
@@ -101,6 +104,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(110, 33);
             textBox4.TabIndex = 33;
+            textBox4.KeyPress += NumericTextBox_KeyPress;
             // 
             // textBox3
             // 
@@ -110,6 +114,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(180, 33);
             textBox3.TabIndex = 32;
+            textBox3.KeyPress += NumericTextBox_KeyPress;
             // 
             // textBox8
             // 
@@ -119,6 +124,8 @@
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(180, 33);
             textBox8.TabIndex = 31;
+            textBox8.TextChanged += textBox8_TextChanged;
+            textBox8.KeyPress += NumericTextBox_KeyPress;
             // 
             // textBox2
             // 
@@ -128,14 +135,18 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(180, 33);
             textBox2.TabIndex = 30;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(243, 86);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(180, 32);
             textBox1.TabIndex = 29;
+            textBox1.TabStop = false;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label7
             // 
@@ -218,12 +229,36 @@
             labelDynamicField.TabIndex = 35;
             labelDynamicField.Text = "Machine ID";
             // 
+            // button2
+            // 
+            button2.BackColor = Color.Silver;
+            button2.Location = new Point(548, 494);
+            button2.Name = "button2";
+            button2.Size = new Size(69, 44);
+            button2.TabIndex = 38;
+            button2.Text = "Cancel";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Silver;
+            button1.Location = new Point(456, 494);
+            button1.Name = "button1";
+            button1.Size = new Size(69, 44);
+            button1.TabIndex = 37;
+            button1.Text = "Save";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // ModifyPart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(643, 564);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(radioDynamicTextbox);
             Controls.Add(labelDynamicField);
             Controls.Add(textBox5);
@@ -266,5 +301,7 @@
         private Label label2;
         private TextBox radioDynamicTextbox;
         private Label labelDynamicField;
+        private Button button2;
+        private Button button1;
     }
 }

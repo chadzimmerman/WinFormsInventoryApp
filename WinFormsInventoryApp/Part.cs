@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsInventoryApp
 {
-    internal abstract class Part 
+    public abstract class Part 
     {
         public int PartID { get; set; }
         public required string Name { get; set; }
@@ -14,5 +14,19 @@ namespace WinFormsInventoryApp
         public int Inventory { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
+
+        //public abstract string DynamicInfo { get; }
+    }
+
+    public class InHouse : Part
+    {
+        //public int MachineID { get; set; }
+        //public override string DynamicInfo => $"Machine ID: {MachineID}";
+    }
+
+    public class OutsourcedPart : Part
+    {
+        //public int CompanyName { get; set; }
+        //public override string DynamicInfo => $"Company: {CompanyName}";
     }
 }

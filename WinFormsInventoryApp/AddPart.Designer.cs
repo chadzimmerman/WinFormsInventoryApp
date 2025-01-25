@@ -144,6 +144,7 @@
             button1.TabIndex = 8;
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -154,14 +155,18 @@
             button2.TabIndex = 9;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(242, 85);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(180, 32);
             textBox1.TabIndex = 10;
+            textBox1.TabStop = false;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -171,6 +176,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(180, 33);
             textBox2.TabIndex = 11;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // radioButtonInHouse
             // 
@@ -207,6 +213,7 @@
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(180, 33);
             textBox8.TabIndex = 19;
+            textBox8.TextChanged += textBox8_TextChanged;
             // 
             // textBox3
             // 

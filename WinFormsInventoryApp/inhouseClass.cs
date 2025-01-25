@@ -9,5 +9,7 @@ namespace WinFormsInventoryApp
     internal class inhouseClass : Part
     {
         public int MachineID { get; set; }
+
+        //public override string DynamicInfo => $"Machine ID: {MachineID}";
     }
 }
